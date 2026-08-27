@@ -1,0 +1,15 @@
+package com.app.voiceclassifier.data.db
+
+import androidx.room.TypeConverter
+
+class Converters {
+    @TypeConverter
+    fun fromFloatArray(value: FloatArray?): String? {
+        return value?.joinToString(",")
+    }
+
+    @TypeConverter
+    fun toFloatArray(value: String?): FloatArray? {
+        return value?.takeIf { it.isNotEmpty() }?.split(",")?.map { it.toFloat() }?.toFloatArray()
+    }
+}
