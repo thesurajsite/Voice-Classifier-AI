@@ -1,4 +1,4 @@
-# Audio Classifier
+# Voice Classifier
 
 This project is a voice-based identification system that identifies a person based on their voice.
 
